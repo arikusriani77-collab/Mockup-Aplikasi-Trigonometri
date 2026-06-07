@@ -16,6 +16,7 @@
     }
     .custom-scrollbar::-webkit-scrollbar {
       width: 6px;
+      height: 6px;
     }
     .custom-scrollbar::-webkit-scrollbar-track {
       background: #1e293b;
@@ -38,8 +39,7 @@
 </head>
 <body class="bg-slate-950 min-h-screen text-slate-100 flex items-center justify-center p-2 sm:p-4 md:p-6">
 
-  <!-- Container Utama Terpusat (Single Card Layout) -->
-  <div class="w-full max-w-4xl bg-slate-900 rounded-3xl shadow-2xl overflow-hidden border border-slate-800 flex flex-col justify-between" style="min-height: 88vh;">
+  <div class="w-full max-w-5xl bg-slate-900 rounded-3xl shadow-2xl overflow-hidden border border-slate-800 flex flex-col justify-between" style="min-height: 90vh;">
     
     <!-- HEADER MEDIA -->
     <header class="bg-gradient-to-r from-emerald-600 to-teal-700 p-5 sm:px-8 sm:py-5 flex flex-col sm:flex-row sm:items-center sm:justify-between border-b border-slate-800 gap-4">
@@ -55,7 +55,7 @@
       <!-- Identitas Pengajar -->
       <div class="flex items-center gap-3 bg-black/25 px-4 py-2.5 rounded-2xl self-start sm:self-auto border border-white/5">
         <div class="text-right">
-          <p class="text-xs font-semibold text-white">Ari Kusriani Iman</p>
+          <p class="text-xs font-semibold text-white">Ari Kusriani Iman, S.Pd.</p>
           <p class="text-[10px] text-emerald-300">SMAN 1 Ngamprah • Kelas X Fase E</p>
         </div>
         <div class="w-9 h-9 rounded-full bg-emerald-500 flex items-center justify-center font-bold text-sm border-2 border-white/20 text-white shadow-md">
@@ -68,23 +68,23 @@
     <main class="flex-1 flex flex-col min-h-0 overflow-hidden">
       
       <!-- NAVIGATION TABS -->
-      <div class="flex border-b border-slate-800 bg-slate-950/40 p-2 overflow-x-auto whitespace-nowrap scrollbar-none gap-1">
-        <button onclick="switchTab('tujuan')" id="tab-tujuan" class="flex-1 min-w-[90px] py-2.5 px-4 text-xs sm:text-sm font-semibold rounded-xl transition-all duration-200 text-emerald-400 bg-slate-850 border border-slate-800">
+      <div class="flex border-b border-slate-800 bg-slate-950/40 p-2 overflow-x-auto whitespace-nowrap scrollbar-none gap-1 custom-scrollbar">
+        <button onclick="switchTab('tujuan')" id="tab-tujuan" class="flex-1 min-w-[100px] py-2.5 px-3 text-xs sm:text-sm font-semibold rounded-xl transition-all duration-200 text-emerald-400 bg-slate-850 border border-slate-800">
           <i class="fa-solid fa-bullseye mr-2 text-emerald-500"></i>Tujuan Belajar
         </button>
-        <button onclick="switchTab('materi')" id="tab-materi" class="flex-1 min-w-[90px] py-2.5 px-4 text-xs sm:text-sm font-semibold rounded-xl transition-all duration-200 text-slate-400 hover:text-slate-200">
+        <button onclick="switchTab('materi')" id="tab-materi" class="flex-1 min-w-[100px] py-2.5 px-3 text-xs sm:text-sm font-semibold rounded-xl transition-all duration-200 text-slate-400 hover:text-slate-200">
           <i class="fa-solid fa-book-open mr-2"></i>Materi & 3D Model
         </button>
-        <button onclick="switchTab('kuis')" id="tab-kuis" class="flex-1 min-w-[90px] py-2.5 px-4 text-xs sm:text-sm font-semibold rounded-xl transition-all duration-200 text-slate-400 hover:text-slate-200">
+        <button onclick="switchTab('kuis')" id="tab-kuis" class="flex-1 min-w-[100px] py-2.5 px-3 text-xs sm:text-sm font-semibold rounded-xl transition-all duration-200 text-slate-400 hover:text-slate-200">
           <i class="fa-solid fa-circle-question mr-2"></i>Kuis Evaluasi (5)
         </button>
-        <button onclick="switchTab('ai')" id="tab-ai" class="flex-1 min-w-[90px] py-2.5 px-4 text-xs sm:text-sm font-semibold rounded-xl transition-all duration-200 text-emerald-500 hover:text-emerald-300">
+        <button onclick="switchTab('ai')" id="tab-ai" class="flex-1 min-w-[100px] py-2.5 px-3 text-xs sm:text-sm font-semibold rounded-xl transition-all duration-200 text-emerald-500 hover:text-emerald-300">
           <i class="fa-solid fa-robot mr-2 animate-pulse"></i>Tanya AI Tutor
         </button>
       </div>
 
       <!-- TAB CONTENTS CONTAINER -->
-      <div class="flex-1 p-5 sm:p-7 overflow-y-auto custom-scrollbar">
+      <div class="flex-1 p-4 sm:p-6 overflow-y-auto custom-scrollbar">
         
         <!-- TAB 1: TUJUAN PEMBELAJARAN -->
         <div id="content-tujuan" class="space-y-6 animate-fadeIn">
@@ -121,7 +121,7 @@
             <i class="fa-solid fa-circle-info text-base mt-0.5 shrink-0"></i>
             <div>
               <strong>Saran Alur Belajar SMAN 1 Ngamprah:</strong> 
-              <span class="block mt-1 text-slate-300 text-xs leading-relaxed">Mulai dengan membaca ulasan di tab <strong>Materi & 3D Model</strong>, lalu interaksikan model 3D segitiga dari Assemblr Edu yang tersedia di bagian bawah materi. Jika bingung, tanyakan ke <strong>Tanya AI Tutor</strong>, dan akhiri dengan membuktikan pemahamanmu di tab <strong>Kuis Evaluasi</strong>!</span>
+              <span class="block mt-1 text-slate-300 text-xs leading-relaxed">Mulai dengan membaca ulasan di tab <strong>Materi & 3D Model</strong>, lalu interaksikan model 3D segitiga dari Assemblr Edu. Jika bingung, tanyakan ke <strong>Tanya AI Tutor</strong>, dan buktikan pemahamanmu di tab <strong>Kuis Evaluasi</strong>!</span>
             </div>
           </div>
         </div>
@@ -224,7 +224,7 @@
             </div>
             
             <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
-              Jika perangkat Anda lambat atau sering crash saat memuat 3D di bawah, silakan tekan tombol warna biru <strong>"Buka di Tab Baru"</strong> untuk melihatnya secara penuh tanpa kendala memori GPU.
+              Jika perangkat Anda lambat saat memuat 3D di bawah, silakan tekan tombol warna biru <strong>"Buka di Tab Baru"</strong> untuk melihatnya secara penuh tanpa kendala memori GPU.
             </p>
 
             <!-- Iframe Container Wrapper -->
@@ -253,36 +253,42 @@
               </div>
 
             </div>
-
-            <!-- Troubleshooting Box -->
-            <div class="bg-slate-900/40 p-4 rounded-xl border border-slate-800 space-y-2">
-              <span class="text-xs font-semibold text-rose-400 block"><i class="fa-solid fa-circle-exclamation mr-1.5"></i>Mengalami Masalah / Layar Hitam?</span>
-              <ul class="list-disc list-inside text-[11px] text-slate-400 space-y-1 leading-relaxed">
-                <li>Klik tombol <strong class="text-indigo-400">"Buka di Tab Baru"</strong> di atas. Ini adalah cara terbaik mencegah crash WebGL di perangkat ber-RAM rendah.</li>
-                <li>Pastikan fitur <strong>Hardware Acceleration</strong> (Akselerasi Perangkat Keras) di setelan browser Chrome Anda dalam keadaan AKTIF.</li>
-                <li>Tutup tab browser lain yang tidak terpakai untuk melonggarkan kapasitas memori RAM perangkat Anda.</li>
-              </ul>
-            </div>
           </div>
         </div>
 
         <!-- TAB 3: KUIS INTERAKTIF -->
         <div id="content-kuis" class="hidden flex-1 flex flex-col justify-between min-h-[350px] animate-fadeIn">
-          <!-- Start Screen -->
-          <div id="quiz-start" class="space-y-6 text-center py-6 my-auto">
-            <div class="w-16 h-16 bg-emerald-500/10 text-emerald-400 rounded-2xl flex items-center justify-center mx-auto text-3xl border border-emerald-500/20 shadow-inner">
+          
+          <!-- Start Screen & Registration Form -->
+          <div id="quiz-start" class="space-y-5 text-center py-4 my-auto max-w-md mx-auto">
+            <div class="w-14 h-14 bg-emerald-500/10 text-emerald-400 rounded-2xl flex items-center justify-center mx-auto text-3xl border border-emerald-500/20 shadow-inner">
               <i class="fa-solid fa-graduation-cap"></i>
             </div>
             <div>
               <h3 class="text-lg sm:text-xl font-bold text-white">Evaluasi Mandiri Trigonometri</h3>
-              <p class="text-xs text-slate-400 mt-1">Selesaikan 5 soal studi kasus penerapan sudut istimewa di kehidupan nyata.</p>
+              <p class="text-xs text-slate-400 mt-1">Selesaikan 5 soal penerapan sudut istimewa di kehidupan nyata.</p>
             </div>
-            <div class="bg-slate-900/60 p-4 rounded-xl text-left text-xs text-slate-300 space-y-2.5 max-w-sm mx-auto border border-slate-800 shadow-md">
-              <p class="flex items-center gap-2"><i class="fa-regular fa-square-check text-emerald-400"></i> <span>5 Soal Pilihan Ganda Interaktif.</span></p>
-              <p class="flex items-center gap-2"><i class="fa-solid fa-award text-emerald-400"></i> <span>Nilai KKM Kelulusan: <strong>80</strong>.</span></p>
+            
+            <!-- Student Info Form (MANDATORY BEFORE QUIZ) -->
+            <div class="bg-slate-900/80 p-5 rounded-2xl border border-slate-800 text-left space-y-4 shadow-lg">
+              <h4 class="text-xs font-bold text-emerald-400 uppercase tracking-wider flex items-center gap-2">
+                <i class="fa-solid fa-id-card"></i> Masukkan Identitas Siswa
+              </h4>
+              <div class="space-y-1.5">
+                <label for="student-name" class="text-xs text-slate-400">Nama Lengkap:</label>
+                <input id="student-name" type="text" placeholder="Contoh: Muhammad Rafli" class="w-full bg-slate-950 border border-slate-850 rounded-xl px-4 py-2.5 text-sm text-slate-200 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-all">
+              </div>
+              <div class="space-y-1.5">
+                <label for="student-class" class="text-xs text-slate-400">Kelas (Fase E):</label>
+                <input id="student-class" type="text" placeholder="Contoh: X-1, X-A, dll." class="w-full bg-slate-950 border border-slate-850 rounded-xl px-4 py-2.5 text-sm text-slate-200 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-all">
+              </div>
+              <div class="text-[10px] text-slate-500 leading-relaxed">
+                * Hasil kuis ini akan langsung terekam pada <strong>Tabel Spreadsheet Sekolah</strong> dan digunakan oleh Ibu Ari Kusriani Iman, S.Pd. sebagai nilai evaluasi formatif.
+              </div>
             </div>
-            <button onclick="startQuiz()" class="px-8 py-3 bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-semibold rounded-xl shadow-lg shadow-emerald-950/30 transition-all text-sm">
-              Mulai Kuis Sekarang
+
+            <button onclick="validateAndStartQuiz()" class="w-full px-8 py-3 bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-semibold rounded-xl shadow-lg shadow-emerald-950/30 transition-all text-sm">
+              Mulai Kuis Sekarang <i class="fa-solid fa-arrow-right ml-1"></i>
             </button>
           </div>
 
@@ -322,30 +328,48 @@
           </div>
 
           <!-- Result Screen -->
-          <div id="quiz-result" class="hidden text-center space-y-5 my-auto py-4">
-            <div id="result-icon-container" class="w-20 h-20 rounded-full flex items-center justify-center mx-auto text-4xl border">
+          <div id="quiz-result" class="hidden text-center space-y-5 my-auto py-4 max-w-md mx-auto">
+            <div id="result-icon-container" class="w-16 h-16 rounded-full flex items-center justify-center mx-auto text-3xl border">
               <!-- Dynamically populated icon -->
             </div>
             <div>
-              <h3 id="result-title" class="text-lg sm:text-xl font-bold text-white"></h3>
-              <p id="result-subtitle" class="text-xs text-slate-400 mt-1.5"></p>
+              <h3 id="result-title" class="text-base sm:text-lg font-bold text-white"></h3>
+              <p id="result-subtitle" class="text-xs text-slate-400 mt-1"></p>
             </div>
-            <div class="bg-slate-900/60 py-3.5 px-8 rounded-2xl inline-block border border-slate-800">
-              <span class="block text-xs text-slate-400 tracking-wider font-semibold">SKOR AKHIR</span>
-              <strong id="result-score-val" class="text-3xl font-extrabold font-mono text-emerald-400">0</strong>
+            
+            <!-- Laporan Hasil Kuis Mandiri (Sertifikat Hasil untuk Bukti Screenshot) -->
+            <div class="bg-slate-900/80 p-5 rounded-2xl border border-slate-800 text-left space-y-3.5 shadow-lg">
+              <h4 class="text-[10px] font-bold text-emerald-400 uppercase tracking-wider border-b border-slate-800/80 pb-2 flex justify-between items-center">
+                <span><i class="fa-solid fa-clipboard-check mr-1"></i> Laporan Hasil Kuis</span>
+                <span class="font-mono text-slate-500 text-[9px]" id="result-date"></span>
+              </h4>
+              <div class="grid grid-cols-3 gap-y-2 text-xs">
+                <span class="text-slate-500">Nama Siswa</span>
+                <span class="col-span-2 text-slate-200 font-semibold" id="result-student-name">-</span>
+                
+                <span class="text-slate-500">Kelas</span>
+                <span class="col-span-2 text-slate-200 font-mono" id="result-student-class">-</span>
+                
+                <span class="text-slate-500">Skor Kuis</span>
+                <span class="col-span-2 font-bold font-mono text-emerald-400 text-sm" id="result-score-display">0 / 100</span>
+              </div>
+              <p class="text-[9px] text-slate-500 text-center pt-2.5 border-t border-slate-800/40">
+                *Silakan screenshot tampilan ini sebagai bukti pengerjaan kuis kepada Ibu Ari Kusriani Iman, S.Pd.
+              </p>
             </div>
+
             <div class="flex justify-center gap-3">
               <button onclick="restartQuiz()" class="px-5 py-2.5 bg-slate-850 hover:bg-slate-800 text-slate-300 border border-slate-700 text-xs font-semibold rounded-xl transition-all">
                 Coba Lagi
               </button>
-              <button onclick="switchTab('tujuan')" class="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold rounded-xl transition-all">
-                Kembali ke Materi
+              <button onclick="switchTab('materi')" class="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold rounded-xl transition-all shadow-md">
+                Tinjau Materi <i class="fa-solid fa-book-open ml-1"></i>
               </button>
             </div>
           </div>
         </div>
 
-        <!-- TAB 4: TANYA AI TUTOR -->
+        <!-- TAB 5: TANYA AI TUTOR -->
         <div id="content-ai" class="hidden flex-1 flex flex-col justify-between h-full min-h-[380px] animate-fadeIn">
           <div class="flex flex-col flex-1">
             <!-- Chat Messages Container -->
@@ -366,7 +390,7 @@
             <div class="mb-4">
               <p class="text-[10px] text-slate-500 font-bold uppercase tracking-widest mb-2"><i class="fa-solid fa-bolt text-amber-500 mr-1"></i>Pertanyaan Cepat:</p>
               <div class="flex flex-wrap gap-2">
-                <button onclick="askQuickPrompt('Jelaskan konsep Sudut Elevasi menggunakan analogi tiang bendera di SMAN 1 Ngamprah!')" class="text-[10px] sm:text-xs bg-slate-850 hover:bg-slate-800 hover:border-emerald-500 text-slate-300 px-3 py-1.5 rounded-full border border-slate-800 transition-all">
+                <button onclick="askQuickPrompt('Jelaskan konsep Sudut Elevasi menggunakan analogi tiang bendera SMAN 1 Ngamprah!')" class="text-[10px] sm:text-xs bg-slate-850 hover:bg-slate-800 hover:border-emerald-500 text-slate-300 px-3 py-1.5 rounded-full border border-slate-800 transition-all">
                   Analogi Sudut Elevasi
                 </button>
                 <button onclick="askQuickPrompt('Bagaimana cara mudah menghafal nilai perbandingan tangen sudut 30, 45, dan 60 derajat?')" class="text-[10px] sm:text-xs bg-slate-850 hover:bg-slate-800 hover:border-emerald-500 text-slate-300 px-3 py-1.5 rounded-full border border-slate-800 transition-all">
@@ -424,6 +448,10 @@
   <script>
     let currentTab = 'tujuan';
     const assemblerUrl = "https://viewer-edu.assemblrworld.com/Viewer/-EvChvPeee72f6EGtdsA?sourceDomain=https://edu.assemblrworld.com/id/creation/-EvChvPeee72f6EGtdsA?utm_campaign=shortenurl&utm_medium=share+creation+dialog&utm_source=mobileapp&fromViewer=true&lang=id"; 
+
+    // Global session variables
+    let currentStudentName = "";
+    let currentStudentClass = "";
 
     // 5 Soal Kuis dengan Render MathML Elegan
     const quizQuestions = [
@@ -563,7 +591,7 @@
     let quizScoreAccumulator = 0;
     let answered = false;
 
-    // Switch Tabs Sisi Kiri
+    // Switch Tabs
     function switchTab(tabId) {
       currentTab = tabId;
       
@@ -573,10 +601,10 @@
         const contentDiv = document.getElementById(`content-${t}`);
         
         if (t === tabId) {
-          tabBtn.className = "flex-1 min-w-[90px] py-2.5 px-4 text-xs sm:text-sm font-semibold rounded-xl transition-all duration-200 text-emerald-400 bg-slate-850 border border-slate-800";
+          tabBtn.className = "flex-1 min-w-[100px] py-2.5 px-3 text-xs sm:text-sm font-semibold rounded-xl transition-all duration-200 text-emerald-400 bg-slate-850 border border-slate-800";
           contentDiv.classList.remove('hidden');
         } else {
-          tabBtn.className = "flex-1 min-w-[90px] py-2.5 px-4 text-xs sm:text-sm font-semibold rounded-xl transition-all duration-200 text-slate-400 hover:text-slate-200";
+          tabBtn.className = "flex-1 min-w-[100px] py-2.5 px-3 text-xs sm:text-sm font-semibold rounded-xl transition-all duration-200 text-slate-400 hover:text-slate-200";
           contentDiv.classList.add('hidden');
         }
       });
@@ -608,7 +636,29 @@
       }
     }
 
-    // Quiz Logic
+    // Validate identity form before starting the quiz
+    function validateAndStartQuiz() {
+      const nameInput = document.getElementById('student-name');
+      const classInput = document.getElementById('student-class');
+      
+      const name = nameInput.value.trim();
+      const studentClass = classInput.value.trim();
+
+      if (!name || !studentClass) {
+        showCustomModal(
+          "Pendaftaran Gagal",
+          "Silakan isi Nama Lengkap dan Kelas Anda terlebih dahulu agar laporan kuis dapat dibuat dengan benar.",
+          "bg-rose-950/40 text-rose-400 border border-rose-900/30",
+          "<i class='fa-solid fa-triangle-exclamation'></i>"
+        );
+        return;
+      }
+
+      currentStudentName = name;
+      currentStudentClass = studentClass;
+      startQuiz();
+    }
+
     function startQuiz() {
       document.getElementById('quiz-start').classList.add('hidden');
       document.getElementById('quiz-play').classList.remove('hidden');
@@ -706,27 +756,165 @@
       document.getElementById('quiz-result').classList.remove('hidden');
 
       const finalScore = quizScoreAccumulator;
-      document.getElementById('result-score-val').innerText = finalScore;
+
+      // Update Tampilan Laporan Nilai Personal
+      document.getElementById('result-student-name').innerText = currentStudentName;
+      document.getElementById('result-student-class').innerText = currentStudentClass;
+      document.getElementById('result-score-display').innerText = `${finalScore} / 100`;
+      
+      const now = new Date();
+      document.getElementById('result-date').innerText = now.toLocaleDateString('id-ID', {
+        day: '2-digit',
+        month: 'short',
+        year: 'numeric'
+      });
 
       const iconBox = document.getElementById('result-icon-container');
       const rTitle = document.getElementById('result-title');
       const rSub = document.getElementById('result-subtitle');
 
       if (finalScore >= 80) {
-        iconBox.className = "w-20 h-20 rounded-2xl flex items-center justify-center mx-auto text-4xl border border-emerald-500 bg-emerald-500/10 text-emerald-400 shadow-lg shadow-emerald-950/20";
+        iconBox.className = "w-16 h-16 rounded-2xl flex items-center justify-center mx-auto text-3xl border border-emerald-500 bg-emerald-500/10 text-emerald-400 shadow-lg shadow-emerald-950/20 animate-bounce";
         iconBox.innerHTML = '<i class="fa-solid fa-medal"></i>';
         rTitle.innerText = "Selamat, Kamu Lulus!";
-        rSub.innerText = "Kerja bagus! Kamu memahami perbandingan trigonometri sudut istimewa dengan baik.";
+        rSub.innerText = "Luar biasa! Pemahamanmu terhadap trigonometri sudut istimewa sangat baik.";
       } else {
-        iconBox.className = "w-20 h-20 rounded-2xl flex items-center justify-center mx-auto text-4xl border border-amber-500 bg-amber-500/10 text-amber-400 shadow-lg shadow-amber-950/20";
+        iconBox.className = "w-16 h-16 rounded-2xl flex items-center justify-center mx-auto text-3xl border border-amber-500 bg-amber-500/10 text-amber-400 shadow-lg shadow-amber-950/20";
         iconBox.innerHTML = '<i class="fa-solid fa-arrow-rotate-left"></i>';
         rTitle.innerText = "Ayo Belajar Lagi!";
-        rSub.innerText = "Skormu masih di bawah KKM 80. Pelajari kembali materi dan model 3D interaktif.";
+        rSub.innerText = "Skormu masih di bawah KKM 80. Pelajari kembali materi sebelum mencoba kuis lagi.";
       }
     }
 
     function restartQuiz() {
       startQuiz();
+    }
+
+    // Spreadsheet-like Renderer for Results Table
+    window.renderSpreadsheetTable = function(dataList) {
+      const rowsContainer = document.getElementById('spreadsheet-rows');
+      if (!dataList || dataList.length === 0) {
+        rowsContainer.innerHTML = `
+          <tr id="empty-table-row">
+            <td colspan="6" class="p-8 text-center text-slate-500 italic">
+              <i class="fa-solid fa-folder-open text-2xl mb-2 block"></i> Belum ada siswa yang menyelesaikan kuis.
+            </td>
+          </tr>
+        `;
+        return;
+      }
+
+      rowsContainer.innerHTML = "";
+      dataList.forEach((row, index) => {
+        const formattedDate = new Date(row.timestamp).toLocaleString('id-ID', {
+          day: '2-digit',
+          month: 'short',
+          year: 'numeric',
+          hour: '2-digit',
+          minute: '2-digit'
+        });
+
+        const tr = document.createElement('tr');
+        tr.className = "hover:bg-slate-900/50 transition-colors border-b border-slate-850";
+        tr.innerHTML = `
+          <td class="p-2.5 border-r border-slate-850 text-center w-12 bg-slate-950/40 text-slate-500 font-mono">${index + 2}</td>
+          <td class="p-2.5 border-r border-slate-850 text-center text-slate-400 font-mono">${index + 1}</td>
+          <td class="p-2.5 border-r border-slate-850 font-medium text-slate-200">${row.name}</td>
+          <td class="p-2.5 border-r border-slate-850 text-slate-300 font-mono">${row.studentClass}</td>
+          <td class="p-2.5 border-r border-slate-850 text-center">
+            <span class="px-2.5 py-1 rounded-md text-xs font-bold font-mono ${row.score >= 80 ? 'bg-emerald-950/60 text-emerald-400 border border-emerald-500/20' : 'bg-amber-950/60 text-amber-400 border border-amber-500/20'}">
+              ${row.score}
+            </span>
+          </td>
+          <td class="p-2.5 text-slate-400 font-mono text-[11px]">${formattedDate}</td>
+        `;
+        rowsContainer.appendChild(tr);
+      });
+    };
+
+    // Export Table as CSV for Google Sheets or Microsoft Excel imports
+    function exportToCSV() {
+      const results = window.quizResultsCache || [];
+      if (results.length === 0) {
+        showCustomModal(
+          "Data Kosong",
+          "Belum ada data kuis siswa yang tercatat untuk diekspor ke spreadsheet.",
+          "bg-rose-950/40 text-rose-400 border border-rose-900/30",
+          "<i class='fa-solid fa-triangle-exclamation'></i>"
+        );
+        return;
+      }
+
+      // Construct CSV data string
+      let csvContent = "data:text/csv;charset=utf-8,";
+      csvContent += "No,Nama Lengkap,Kelas,Skor,Waktu Selesai\n";
+      
+      results.forEach((row, index) => {
+        const formattedDate = new Date(row.timestamp).toLocaleString('id-ID').replace(',', '');
+        csvContent += `${index + 1},"${row.name.replace(/"/g, '""')}","${row.studentClass.replace(/"/g, '""')}",${row.score},"${formattedDate}"\n`;
+      });
+
+      // Trigger automatic file download
+      const encodedUri = encodeURI(csvContent);
+      const link = document.createElement("a");
+      link.setAttribute("href", encodedUri);
+      link.setAttribute("download", `Rekap_Nilai_Trigonometri_SMAN_1_Ngamprah_${new Date().toISOString().slice(0, 10)}.csv`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    // Custom Confirm Dialog controllers
+    function confirmResetTable() {
+      // Kosongkan input PIN sebelumnya
+      document.getElementById('teacher-pin-input').value = "";
+      document.getElementById('confirm-modal').classList.remove('hidden');
+    }
+
+    function closeConfirmModal() {
+      document.getElementById('confirm-modal').classList.add('hidden');
+    }
+
+    async function executeResetTable() {
+      const pinInput = document.getElementById('teacher-pin-input').value.trim();
+      
+      // Validasi PIN Guru SMAN 1 Ngamprah
+      if (pinInput !== "ngamprah") {
+        closeConfirmModal();
+        showCustomModal(
+          "Akses Ditolak",
+          "PIN Keamanan Guru yang Anda masukkan salah. Hanya Ibu Ari Kusriani Iman, S.Pd. yang berwenang mereset data.",
+          "bg-rose-950/40 text-rose-400 border border-rose-900/30",
+          "<i class='fa-solid fa-user-shield'></i>"
+        );
+        return;
+      }
+
+      closeConfirmModal();
+      
+      let deletedOnCloud = false;
+      if (window.deleteQuizResultsCloud) {
+        deletedOnCloud = await window.deleteQuizResultsCloud();
+      }
+
+      if (deletedOnCloud) {
+        showCustomModal(
+          "Database Cloud Berhasil Direset",
+          "Seluruh rekapitulasi data nilai siswa pada cloud database SMAN 1 Ngamprah telah dikosongkan secara permanen.",
+          "bg-emerald-950/40 text-emerald-400 border border-emerald-900/30",
+          "<i class='fa-solid fa-trash-arrow-up'></i>"
+        );
+      } else {
+        // Local Fallback reset (if Firebase is unavailable or offline)
+        window.quizResultsCache = [];
+        window.renderSpreadsheetTable([]);
+        showCustomModal(
+          "Tabel Lokal Berhasil Direset",
+          "Seluruh data nilai pada sesi kali ini telah dikosongkan.",
+          "bg-emerald-950/40 text-emerald-400 border border-emerald-900/30",
+          "<i class='fa-solid fa-circle-check'></i>"
+        );
+      }
     }
 
     // Gemini AI Integration
@@ -891,6 +1079,12 @@ Aturan Anda dalam menjawab:
     }
 
     function resetAllApp() {
+      // Clear registration inputs
+      document.getElementById('student-name').value = "";
+      document.getElementById('student-class').value = "";
+      currentStudentName = "";
+      currentStudentClass = "";
+
       document.getElementById('quiz-start').classList.remove('hidden');
       document.getElementById('quiz-play').classList.add('hidden');
       document.getElementById('quiz-result').classList.add('hidden');
@@ -919,7 +1113,7 @@ Aturan Anda dalam menjawab:
 
       showCustomModal(
         "Aplikasi Berhasil Direset!",
-        "Seluruh kemajuan kuis, model 3D, dan obrolan tutor AI telah dikembalikan ke kondisi awal.",
+        "Seluruh kemajuan kuis, pendaftaran siswa, model 3D, dan obrolan tutor AI telah dikembalikan ke kondisi awal.",
         "bg-slate-850 text-emerald-400 border border-slate-850 shadow-md",
         "<i class='fa-solid fa-rotate'></i>"
       );
